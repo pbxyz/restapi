@@ -18,6 +18,6 @@ app.get('/', (req, res) => {
     })
 })
 
-app.use('/products', productsRoutes)
+app.use(productsRoutes)
 
 export default app
