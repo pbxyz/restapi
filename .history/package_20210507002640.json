@@ -6,7 +6,7 @@
   "scripts": {
     "dis": "babel src --out-dir dis",
     "dev": "nodemon --exec ./node_modules/.bin/babel-node src/index.js",
-    "start": "node dis/index.js"
+    "start": "node src/index.js"
   },
   "author": "",
   "license": "ISC",

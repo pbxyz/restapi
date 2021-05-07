@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dis": "babel src --out-dir dis",
-    "dev": "nodemon --exec ./node_modules/.bin/babel-node src/index.js",
-    "start": "node dis/index.js"
+    "build": "babel src -d lib"
+    // "start": "nodemon src/index.js --exec babel-node"
   },
   "author": "",
   "license": "ISC",
