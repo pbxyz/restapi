@@ -19,7 +19,17 @@ export const updateProductById = async (req, res) => {
     res.status(200).json(updateProduct)
 }
 export const deleteProductById = async (req, res) => {
-    const { productId } = req.params
-    await Product.findByIdAndDelete(productId)
+    const { productId } = req.param
+    console.log(productId)
+    await Product.findByIdAndRemove(productId, (err) => {
+        if (err) {
+            console.log(err)
+        } else {
+            console.log(`Deleted article successfully`)
+        }
+    })
     res.status(204).json()
+
+    // const deleteProduct = await Product.findByIdAndDelete(req.param.productId)
+    // res.status(200).json(deleteProduct)
 }
